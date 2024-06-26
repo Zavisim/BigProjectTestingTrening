@@ -15,4 +15,6 @@ class StatisticsPage(BasePage):
     def table_1_plan_input(self):
         return Element(self.driver, By.CSS_SELECTOR, '[data-category-id="1"] .plan-for-category input')
 
-
+    @property
+    def statistics(self):
+        return self.driver.find_element(By.CSS_SELECTOR, '.navbar a[href="/statistics"]')
