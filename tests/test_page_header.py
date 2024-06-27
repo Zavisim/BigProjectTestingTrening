@@ -104,4 +104,4 @@ def test_page_statistics(browser, statistics_page, main_page):
     time.sleep(2)
     statistics_page.table_1_plan_input.find().send_keys(Keys.TAB)
     time.sleep(2)
-    assert statistics_page.table_1_plan.__getattribute__('value') == '1234'
+    assert statistics_page.table_1_plan.find().__getattribute__('text') == '1234'

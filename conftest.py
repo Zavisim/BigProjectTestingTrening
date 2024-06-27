@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver
 
+from pages.expenses_page import ExpensesPage
 from pages.main_page import MainPage
 from pages.statistics_page import StatisticsPage
 
@@ -21,6 +22,11 @@ def main_page(browser) -> MainPage:
 @pytest.fixture
 def statistics_page(browser) -> StatisticsPage:
     return StatisticsPage(browser)
+
+
+@pytest.fixture
+def expenses_page(browser) -> ExpensesPage:
+    return ExpensesPage(browser)
 
 
 @pytest.fixture
