@@ -15,7 +15,7 @@ def test_logout(browser, main_page):
     assert browser.current_url == main_page.URL + 'login'
 
 
-def test_diagrams(browser, main_page):
+def test_diagrams_click_button(browser, main_page):
     main_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
@@ -27,7 +27,7 @@ def test_diagrams(browser, main_page):
     assert browser.current_url == main_page.URL
 
 
-def test_statistics(browser, main_page):
+def test_statistics_click_button(browser, main_page):
     main_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
@@ -51,7 +51,7 @@ def test_expenses(browser, main_page):
     assert browser.current_url == main_page.URL + 'expenses'
 
 
-def test_incomes(browser, main_page):
+def test_incomes_click_button(browser, main_page):
     main_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
@@ -63,7 +63,7 @@ def test_incomes(browser, main_page):
     assert browser.current_url == main_page.URL + 'incomes'
 
 
-def test_imports(browser, main_page):
+def test_imports_click_button(browser, main_page):
     main_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
@@ -75,7 +75,7 @@ def test_imports(browser, main_page):
     assert browser.current_url == main_page.URL + 'bank-import'
 
 
-def test_logo(browser, main_page):
+def test_logo_click_button(browser, main_page):
     main_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
@@ -87,7 +87,7 @@ def test_logo(browser, main_page):
     assert browser.current_url == main_page.URL
 
 
-def test_page_statistics(browser, statistics_page, main_page):
+def test_page_statistics_cell_work(browser, statistics_page, main_page):
     statistics_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
