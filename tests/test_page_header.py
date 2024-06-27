@@ -3,7 +3,7 @@ import time
 from selenium.webdriver import Keys
 
 
-def test_logout(browser, main_page):
+def test_logout_click_button(browser, main_page):
     main_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
