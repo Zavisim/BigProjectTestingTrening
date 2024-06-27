@@ -39,7 +39,7 @@ def test_statistics_click_button(browser, main_page):
     assert browser.current_url == main_page.URL + 'statistics'
 
 
-def test_expenses(browser, main_page):
+def test_expenses_click_button(browser, main_page):
     main_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
@@ -87,7 +87,7 @@ def test_logo_click_button(browser, main_page):
     assert browser.current_url == main_page.URL
 
 
-def test_page_statistics_cell_work(browser, statistics_page, main_page):
+def test_page_statistics_work_cell(browser, statistics_page, main_page):
     statistics_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
