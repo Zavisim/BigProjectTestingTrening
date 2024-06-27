@@ -21,3 +21,11 @@ def main_page(browser) -> MainPage:
 @pytest.fixture
 def statistics_page(browser) -> StatisticsPage:
     return StatisticsPage(browser)
+
+
+@pytest.fixture
+def authorization(browser, main_page, statistics_page):
+    main_page.login_input.send_keys('test@test.ru')
+    main_page.password_input.send_keys('1234')
+    main_page.check_remember_button.click()
+    main_page.authorization_button.click()

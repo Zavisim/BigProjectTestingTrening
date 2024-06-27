@@ -45,7 +45,7 @@ class MainPage(BasePage):
         return self.driver.find_element(By.CSS_SELECTOR, '.navbar a[href="/bank-import"]')
 
     @property
-    def exit(self):
+    def logout(self):
         return Element(self.driver, By.CSS_SELECTOR, '.profile a[href="/logout"]')
 
     @property

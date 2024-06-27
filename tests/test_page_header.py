@@ -3,14 +3,14 @@ import time
 from selenium.webdriver import Keys
 
 
-def test_exit(browser, main_page):
+def test_logout(browser, main_page):
     main_page.open()
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
     main_page.check_remember_button.click()
     main_page.authorization_button.click()
     time.sleep(2)
-    main_page.exit.click()
+    main_page.logout.click()
     time.sleep(2)
     assert browser.current_url == main_page.URL + 'login'
 
