@@ -13,3 +13,7 @@ class ExpensesPage(BasePage):
     @property
     def choice_category(self):
         return self.driver.find_element(By.ID, 'category')
+
+    @property
+    def filter_month(self):
+        return self.driver.find_element(By.ID, 'monthFilter')
