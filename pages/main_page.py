@@ -8,6 +8,7 @@ from elements.element import Element
 class MainPage(BasePage):
     URL = "http://147.45.145.230:5000/"
 
+    # TODO блок кода ниже вынести в PageObject LoginPage
     @property
     def login_input(self):
         return self.driver.find_element(By.ID, 'email')
@@ -23,6 +24,8 @@ class MainPage(BasePage):
     @property
     def authorization_button(self):
         return self.driver.find_element(By.ID, 'submit')
+
+    # TODO блок кода выше вынести в PageObject LoginPage
 
     @property
     def diagrams(self):

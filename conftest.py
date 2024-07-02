@@ -29,8 +29,13 @@ def expenses_page(browser) -> ExpensesPage:
     return ExpensesPage(browser)
 
 
+# TODO тут ты видимо хотел передать авторизацию в фикстуры страниц
+#  чтобы авторизация происходила до теста, но перепутал,
+#  надо наоборот передавать authorization в фикстуры страниц
 @pytest.fixture
 def authorization(browser, main_page, statistics_page):
+    # TODO нет перехода на страницу, уже писал в другом месте, тут надо использовать не MainPage
+    #  а сделать новый PageObject LoginPage
     main_page.login_input.send_keys('test@test.ru')
     main_page.password_input.send_keys('1234')
     main_page.check_remember_button.click()
