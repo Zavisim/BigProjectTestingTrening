@@ -11,7 +11,7 @@ class ExpensesPage(BasePage):
         return self.driver.find_element(By.ID, 'addRowBtn')
 
     @property
-    def choice_category(self):
+    def filter_category(self):
         return self.driver.find_element(By.ID, 'category')
 
     @property

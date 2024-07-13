@@ -9,22 +9,6 @@ class MainPage(BasePage):
     URL = "http://147.45.145.230:5000/"
 
     @property
-    def login_input(self):
-        return self.driver.find_element(By.ID, 'email')
-
-    @property
-    def password_input(self):
-        return self.driver.find_element(By.ID, 'password')
-
-    @property
-    def check_remember_button(self):
-        return self.driver.find_element(By.ID, 'remember')
-
-    @property
-    def authorization_button(self):
-        return self.driver.find_element(By.ID, 'submit')
-
-    @property
     def diagrams(self):
         return self.driver.find_element(By.CSS_SELECTOR, '.navbar a[href="/"]')
 
@@ -45,7 +29,7 @@ class MainPage(BasePage):
         return self.driver.find_element(By.CSS_SELECTOR, '.navbar a[href="/bank-import"]')
 
     @property
-    def logout(self):
+    def logout (self):
         return Element(self.driver, By.CSS_SELECTOR, '.profile a[href="/logout"]')
 
     @property
