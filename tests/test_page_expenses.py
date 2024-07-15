@@ -9,9 +9,8 @@ def test_add_new_expenses(browser, expenses_page, main_page, login_page):
     time.sleep(2)
     expenses_page.add_value.click()
     time.sleep(2)
-    #expenses_page.choice_category.click()
-    choice_category = expenses_page.filter_category
-    select = Select(choice_category)
+    expenses_page.description.click()
+    select = Select(expenses_page.filter_category)
     select.select_by_visible_text('ПРОДУКТЫ')
     time.sleep(2)
 
@@ -24,8 +23,9 @@ def test_filter_month(browser, expenses_page, main_page, login_page):
     time.sleep(2)
     choice_month = expenses_page.filter_month
     select = Select(choice_month)
-    select.select_by_index(3)
+    select.select_by_index(12)
     time.sleep(2)
     select.select_by_index(4)
     time.sleep(2)
+
 
