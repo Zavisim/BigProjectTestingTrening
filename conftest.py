@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver
 
 from pages.expenses_page import ExpensesPage
+from pages.incomes_page import IncomesPage
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
 from pages.statistics_page import StatisticsPage
@@ -33,3 +34,8 @@ def expenses_page(browser) -> ExpensesPage:
 @pytest.fixture
 def login_page(browser) -> LoginPage:
     return LoginPage(browser)
+
+
+@pytest.fixture
+def incomes_page(browser) -> IncomesPage:
+    return IncomesPage(browser)

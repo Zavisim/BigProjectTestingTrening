@@ -10,7 +10,7 @@ class LoginPage(BasePage):
 
     @property
     def login_input(self):
-        return self.driver.find_element(By.ID, 'email')
+        return self.driver.find_element(By.ID, 'login')
 
     @property
     def password_input(self):

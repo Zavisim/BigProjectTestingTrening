@@ -4,7 +4,7 @@ from selenium.webdriver import Keys
 
 
 def test_header_logout_click_button(browser, main_page, login_page):
-    login_page.login('test@test.ru', '1234')
+    login_page.login('test', '1234')
     time.sleep(2)
     main_page.logout.click()
     time.sleep(2)
@@ -12,7 +12,7 @@ def test_header_logout_click_button(browser, main_page, login_page):
 
 
 def test_header_diagrams_click_button(browser, main_page, login_page):
-    login_page.login('test@test.ru', '1234')
+    login_page.login('test', '1234')
     time.sleep(2)
     main_page.diagrams.click()
     time.sleep(2)
@@ -20,7 +20,7 @@ def test_header_diagrams_click_button(browser, main_page, login_page):
 
 
 def test_header_statistics_click_button(browser, main_page, login_page):
-    login_page.login('test@test.ru', '1234')
+    login_page.login('test', '1234')
     time.sleep(2)
     main_page.statistics.click()
     time.sleep(2)
@@ -28,7 +28,7 @@ def test_header_statistics_click_button(browser, main_page, login_page):
 
 
 def test_header_expenses_click_button(browser, main_page, login_page):
-    login_page.login('test@test.ru', '1234')
+    login_page.login('test', '1234')
     time.sleep(2)
     main_page.expenses.click()
     time.sleep(2)
@@ -36,7 +36,7 @@ def test_header_expenses_click_button(browser, main_page, login_page):
 
 
 def test_header_incomes_click_button(browser, main_page, login_page):
-    login_page.login('test@test.ru', '1234')
+    login_page.login('test', '1234')
     time.sleep(2)
     main_page.incomes.click()
     time.sleep(2)
@@ -52,7 +52,7 @@ def test_header_imports_click_button(browser, main_page, login_page):
 
 
 def test_header_logo_click_button(browser, main_page, login_page):
-    login_page.login('test@test.ru', '1234')
+    login_page.login('test', '1234')
     time.sleep(2)
     main_page.logo.click()
     time.sleep(2)
@@ -60,7 +60,7 @@ def test_header_logo_click_button(browser, main_page, login_page):
 
 
 def test_page_statistics_work_cell(browser, statistics_page, main_page, login_page):
-    login_page.login('test@test.ru', '1234')
+    login_page.login('test', '1234')
     time.sleep(2)
     main_page.statistics.click()
     time.sleep(2)
